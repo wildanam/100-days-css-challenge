@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #3faf82;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.bar {
+  width: 80px;
+  height: 10px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.change .bar-1 {
+  animation: animate-bar-1 .4s forwards;
+}
+
+@keyframes animate-bar-1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(45deg);
+  }
+}
+
+.bar-1 {
+  animation: animate-bar-1-rev .4s;
+}
+
+@keyframes animate-bar-1-rev {
+  0% {
+    transform: translateY(20px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.bar-2 {
+  transition: .4s;
+}
+
+.change .bar-2 {
+  opacity: 0;
+}
+
+.change .bar-3 {
+  animation: animate-bar-3 .4s forwards;
+}
+
+@keyframes animate-bar-3 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-20px) rotate(-45deg);
+  }
+}
+
+.bar-3 {
+  animation: animate-bar-3-rev .4s;
+}
+
+@keyframes animate-bar-3-rev {
+  0% {
+    transform: translateY(-20px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
